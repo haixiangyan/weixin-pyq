@@ -24,10 +24,6 @@ umi-production
 .idea
 
 ### backend
-# compiled output
-/dist
-/node_modules
-
 # Logs
 logs
 *.log
@@ -37,11 +33,10 @@ lerna-debug.log*
 
 
 # Tests
-/coverage
-/.nyc_output
+coverage
+.nyc_output
 
 # IDEs and editors
-/.idea
 .project
 .classpath
 .c9/
