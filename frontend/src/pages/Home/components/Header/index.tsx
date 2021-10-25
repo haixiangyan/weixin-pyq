@@ -1,11 +1,20 @@
 import styles from "./styles.less";
+import {FC} from "react";
 
-const Header = () => {
+interface Props {
+  banner: string;
+  name: string;
+  avatar: string;
+}
+
+const Header: FC<Props> = (props) => {
+  const { banner, name, avatar } = props;
+
   return (
-    <header className={styles.header} style={{ backgroundImage: "url('https://avatars.githubusercontent.com/u/17061654?v=4')" }}>
+    <header className={styles.header} style={{ backgroundImage: `url('${banner}')` }}>
       <div className={styles.user}>
-        <span className={styles.name}>海怪</span>
-        <img className={styles.avatar} src="https://avatars.githubusercontent.com/u/17061654?v=4" alt="头像"/>
+        <span className={styles.name}>{name}</span>
+        <img className={styles.avatar} src={avatar} alt="头像"/>
       </div>
     </header>
   )
