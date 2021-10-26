@@ -1,0 +1,59 @@
+.postItem {
+  padding: 12px 24px;
+  display: flex;
+
+  .avatarWrapper {
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+    }
+  }
+
+  .contentWrapper {
+    flex: 1;
+    padding-left: 12px;
+
+    .text {
+      color: #dfe0e0;
+      margin-bottom: 0;
+    }
+
+    .actions {
+      display: flex;
+      margin: 12px 0;
+      justify-content: space-between;
+      align-items: center;
+
+      .time {
+        color: #676868;
+        font-size: .9em;
+      }
+
+      .button {
+        padding: 0 8px;
+        background: #3a3a3b;
+        border-radius: 8px;
+        border: none;
+        color: #788aa2;
+      }
+    }
+
+    .commentArea {
+      padding: 6px 12px;
+      background: #3a3a3b;
+      color: white;
+
+      .like {
+        display: flex;
+        margin-bottom: 12px;
+      }
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: #323233;
+    }
+  }
+}
