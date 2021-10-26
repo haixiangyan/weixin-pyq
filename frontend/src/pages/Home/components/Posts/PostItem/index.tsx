@@ -1,4 +1,4 @@
-import {FC} from "react";
+import {FC, useState} from "react";
 import CommentItem from "@/pages/Home/components/Posts/CommentItem";
 import styles from './styles.less';
 import Person from "@/pages/Home/components/Posts/Person";
@@ -6,6 +6,8 @@ import {HeartOutlined} from "@ant-design/icons";
 import ActionButton from "@/pages/Home/components/Posts/ActionButton";
 
 const PostItem: FC = () => {
+  const [actionVisible, setActionVisible] = useState<boolean>(false);
+
   return (
     <li className={styles.postItem}>
       <div className={styles.avatarWrapper}>
@@ -24,7 +26,7 @@ const PostItem: FC = () => {
         {/*操作*/}
         <div className={styles.actions}>
           <span className={styles.time}>2天前</span>
-          <ActionButton onComment={() => {}} onLike={() => {}} />
+          <ActionButton panelVisible={actionVisible} setPanelVisible={setActionVisible} onLike={() => {}} />
         </div>
 
         <div className={styles.commentArea}>

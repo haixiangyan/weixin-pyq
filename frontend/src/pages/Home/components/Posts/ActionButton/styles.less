@@ -1,9 +1,51 @@
-.actionButton {
-  padding: 0 4px;
-  background: #3a3a3b;
-  border-radius: 6px;
-  border: none;
-  color: #788aa2;
-  line-height: 14px;
-  font-size: 1.5em;
+.wrapper {
+  position: relative;
+
+  .actionButton {
+    padding: 0 4px;
+    background: #3a3a3b;
+    border-radius: 6px;
+    border: none;
+    color: #788aa2;
+    line-height: 14px;
+    font-size: 1.5em;
+    transition: background-color .3s;
+
+    &:hover {
+      background: #3c3c3d;
+    }
+  }
+
+  .panel {
+    position: absolute;
+    right: calc(100% + 8px);
+    top: 50%;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+    transform: translateY(-50%);
+    background: #5d5d5d;
+
+    .divider {
+      width: 1px;
+      height: 1.2em;
+      background: #7c7c7c;
+    }
+
+    button {
+      padding: 8px 18px;
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      border: none;
+      background: #5d5d5d;
+      color: #dfe0e0;
+
+      > .text {
+        margin-left: 4px;
+        font-size: .7em;
+      }
+    }
+  }
 }
