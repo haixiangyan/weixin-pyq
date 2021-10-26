@@ -2,6 +2,8 @@ import {FC} from "react";
 import CommentItem from "@/pages/Home/components/Posts/CommentItem";
 import styles from './styles.less';
 import Person from "@/pages/Home/components/Posts/Person";
+import {HeartOutlined} from "@ant-design/icons";
+import ActionButton from "@/pages/Home/components/Posts/ActionButton";
 
 const PostItem: FC = () => {
   return (
@@ -22,13 +24,15 @@ const PostItem: FC = () => {
         {/*操作*/}
         <div className={styles.actions}>
           <span className={styles.time}>2天前</span>
-          <button className={styles.button}>-</button>
+          <ActionButton onComment={() => {}} onLike={() => {}} />
         </div>
 
         <div className={styles.commentArea}>
           {/*点赞*/}
           <div className={styles.like}>
-            <div>Like</div>
+            <span className={styles.likeIcon}>
+              <HeartOutlined />
+            </span>
             <ul>
               <Person userId="1" name="张三" />
               ，
